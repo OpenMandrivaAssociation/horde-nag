@@ -16,6 +16,7 @@ URL:		http://www.horde.org/%{module}
 Requires(post):	rpm-helper
 Requires:	horde >= 3.0
 BuildArch:	noarch
+BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description
 Nag is the Horde task list application. It stores todo items, things
