@@ -1,7 +1,7 @@
 %define	module	nag
 %define	name	horde-%{module}
-%define version 2.1.4
-%define release %mkrel 1
+%define version 2.2
+%define release %mkrel 2
 %define _requires_exceptions pear(.*)
 
 Name:           %{name}
@@ -10,9 +10,8 @@ Release:        %{release}
 Summary:	The Horde task list manager
 License:	GPL
 Group: 		System/Servers
-Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.bz2
-Patch0:		%{name}-2.0-path.patch
 URL:		http://www.horde.org/%{module}
+Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
 Requires(post):	rpm-helper
 Requires:	horde >= 3.0
 BuildArch:	noarch
@@ -24,17 +23,7 @@ due later this week, etc. It is very similar in functionality to the
 Palm ToDo application.
 
 %prep
-
 %setup -q -n %{module}-h3-%{version}
-%patch
-
-# fix perms
-chmod +x scripts/*
-
-# fix encoding
-for file in `find . -type f`; do
-    perl -pi -e 'BEGIN {exit unless -T $ARGV[0];} tr/\r//d;' $file
-done
 
 %build
 
