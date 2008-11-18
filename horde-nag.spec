@@ -1,7 +1,7 @@
 %define	module	nag
 %define	name	horde-%{module}
 %define version 2.3.1
-%define release %mkrel 1
+%define release %mkrel 2
 %define _requires_exceptions pear(.*)
 
 Name:           %{name}
@@ -12,6 +12,7 @@ License:	GPL
 Group: 		System/Servers
 URL:		http://www.horde.org/%{module}
 Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
+Patch:      %{module}-h3-2.3.1-fix-constant-loading.patch
 Requires(post):	rpm-helper
 Requires:	horde >= 3.0
 BuildArch:	noarch
@@ -24,6 +25,7 @@ Palm ToDo application.
 
 %prep
 %setup -q -n %{module}-h3-%{version}
+%patch -p 1
 
 %build
 
