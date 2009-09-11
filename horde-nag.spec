@@ -1,7 +1,7 @@
 %define	module	nag
 %define	name	horde-%{module}
 %define version 2.3.1
-%define release %mkrel 2
+%define release %mkrel 3
 %define _requires_exceptions pear(.*)
 
 Name:           %{name}
