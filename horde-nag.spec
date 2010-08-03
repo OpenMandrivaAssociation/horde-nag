@@ -1,7 +1,7 @@
 %define	module	nag
 %define	name	horde-%{module}
 %define version 2.3.4
-%define release %mkrel 2
+%define release %mkrel 3
 %define _requires_exceptions pear(.*)
 
 Name:           %{name}
@@ -16,7 +16,6 @@ Patch:      %{module}-h3-2.3.1-fix-constant-loading.patch
 Requires(post):	rpm-helper
 Requires:	horde >= 3.3.5
 BuildArch:	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description
 Nag is the Horde task list application. It stores todo items, things
