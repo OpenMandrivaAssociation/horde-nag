@@ -1,0 +1,12 @@
+diff -Naur --exclude '*~' nag-h3-2.3.1/config/prefs.php.dist nag-h3-2.3.1-fix-constant-loading/config/prefs.php.dist
+--- nag-h3-2.3.1/config/prefs.php.dist	2008-07-02 18:15:45.000000000 +0200
++++ nag-h3-2.3.1-fix-constant-loading/config/prefs.php.dist	2008-11-18 22:47:56.000000000 +0100
+@@ -6,7 +6,7 @@
+  */
+ 
+ // Make sure that constants are defined.
+-require_once dirname(__FILE__) . '/../lib/Nag.php';
++require_once '/usr/share/horde/nag/lib/Nag.php';
+ 
+ $prefGroups['display'] = array(
+     'column' => _("General Options"),
