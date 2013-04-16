@@ -1,19 +1,14 @@
 %define	module	nag
-%define	name	horde-%{module}
-%define version 2.3.6
-%define release: 3
-%define _requires_exceptions pear(.*)
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:           horde-%{module}
+Version:        2.3.6
+Release:        3
 Summary:	The Horde task list manager
 License:	GPL
 Group: 		System/Servers
 URL:		http://www.horde.org/%{module}
 Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
 Patch:      %{module}-h3-2.3.1-fix-constant-loading.patch
-Requires(post):	rpm-helper
 Requires:	horde >= 3.3.5
 BuildArch:	noarch
 
