@@ -3,7 +3,7 @@
 
 Name:           horde-%{module}
 Version:        2.3.6
-Release:        5
+Release:        6
 Summary:	The Horde task list manager
 
 License:	GPL
